@@ -11,6 +11,7 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    border: 1px solid purple;
   }
   
   .jumbotron {
@@ -71,11 +72,13 @@ body {
   }
 
   .hour {
-      border: 1px solid red;
+      border: 1px solid black;
       display: flex;
       justify-content: flex-end;
       padding: 10px 10px 0 0;
-      border-left: 0px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      
   }
   .tasks {
       border: 1px solid purple;
