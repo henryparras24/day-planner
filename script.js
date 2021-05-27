@@ -31,3 +31,24 @@ $("#time2 .saveBtnValue").val(localStorage.getItem("time2"))
 $("#time3 .saveBtnValue").val(localStorage.getItem("time3"))
 $("#time4 .saveBtnValue").val(localStorage.getItem("time4"))
 
+
+function hourBlock(){
+   var now = moment().hours();
+
+   $(".row").each(function(){
+      var blockTime = parseInt($(this).attr("id"))
+
+      if (now > blockTime){
+         $(this).addClass("past")
+      } else if (now === blockTime){
+         $(this).removeClass("past")
+         $(this).addClass("present")
+      } else {
+      $(this).removeClass("past")
+      $(this).removeClass("present")
+      $(this).addClass("future")
+      }
+   })
+
+}
+hourBlock();
