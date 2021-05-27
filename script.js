@@ -13,18 +13,21 @@ saveButton.addEventListener("click", storeStuff);
 
 function storeStuff (){
     var saveButtonValue = document.querySelector('.saveBtnValue').value;
-    localStorage.setItem("saveButtonValue", saveButtonValue ) ;
+    var description = $(this).siblings(".saveBtnValue").val()
+    console.log(description)
+    var time = $(this).parent().attr("id")
+    console.log(time)
+    localStorage.setItem(time, description);
     
-
-
 }
 
+$("#time8 .saveBtnValue").val(localStorage.getItem("time8"))
+$("#time9 .saveBtnValue").val(localStorage.getItem("time9"))
+$("#time10 .saveBtnValue").val(localStorage.getItem("time10"))
+$("#time11 .saveBtnValue").val(localStorage.getItem("time11"))
+$("#time12 .saveBtnValue").val(localStorage.getItem("time12"))
+$("#time1 .saveBtnValue").val(localStorage.getItem("time1"))
+$("#time2 .saveBtnValue").val(localStorage.getItem("time2"))
+$("#time3 .saveBtnValue").val(localStorage.getItem("time3"))
+$("#time4 .saveBtnValue").val(localStorage.getItem("time4"))
 
-//document.getElementById("save").addEventListener("click", function ()
-   // {
-      //  var user = document.getElementById("user").value ;
-        //localStorage["user"] = user ;
-     //   localStorage.setItem("user", user) ;
-     //   alert("gmail id saved") ;
-     //   console.log("gmail id saved")
-   // } , false);
